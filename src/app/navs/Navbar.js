@@ -116,9 +116,9 @@ export default function Navbar({ isVisible }) {
   return (
     <>
       {/* Top Navigation Bar */}
-        <nav className={`fixed top-0 left-0 right-0   transition-transform duration-300 z-50 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-          <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex justify-around items-center">
+      <nav className={`fixed top-0 left-0 right-0 bg-[#151417] shadow-lg border-b border-white/10 transition-transform duration-300 z-50 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className="max-w-7xl mx-auto px-6 py-3">
+          <div className="flex justify-around items-center pb-1">
             {/* Logo and Name */}
             <div className="flex items-center gap-2" style={{ width: '145px', minWidth: '145px' }}>
               <DecryptedText text="SUDHARSAN." />
@@ -127,7 +127,6 @@ export default function Navbar({ isVisible }) {
             {/* Center Navigation Links */}
               {/* Animated Lubber/Slidebar Navigation */}
               <NavLinks />
-
             {/* Social Icons */}
             <div className="flex gap-3 items-center group">
               {/* Star Icon */}

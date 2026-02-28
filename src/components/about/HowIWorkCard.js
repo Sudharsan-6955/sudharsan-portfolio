@@ -28,7 +28,7 @@ const HowIWorkCard = () => {
     const [animateKey, setAnimateKey] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <div className="row-span-2 col-span-1 bg-[#151417] md:col-span-2 rounded-2xl border-[3px] overflow-hidden shadow-2xl relative">
+        <div className="row-span-2 col-span-1 bg-[#151417] md:col-span-2 rounded-2xl border border-gray-700 overflow-hidden shadow-2xl relative">
             {/* Top bar with label and hamburger */}
             <div className="flex items-center justify-between m-4 relative">
                 <div className="p-2 rounded-full text-sm md:text-xl text-center font-semibold font-unbounded z-10 w-fit shadow-sm"> <span className="text-[#FF9900]">How I Work </span>Understand requirements, create designs, develop features, optimize, and deploy confidently.</div>

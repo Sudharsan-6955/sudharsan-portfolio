@@ -6,7 +6,7 @@ import MarqueeBanner from './MarqueeBanner';
 
 export default function HeroSection() {
   return (
-    <section id="home" className="pb-6">
+    <section id="home" className="pb-6 ">
       {/* Main Hero Content */}
       <div className="flex flex-col gap-3 lg:gap-8 ">
         {/* Row 1: ProfessionalBio + BrandInfo (with Marquee inside) */}
