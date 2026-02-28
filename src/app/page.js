@@ -1,65 +1,57 @@
-import Image from "next/image";
+'use client';
 
+import { useState, useEffect } from 'react';
+import HeroSection from '@/components/home/HeroSection';
+import ProjectsSection from '@/components/projects/ProjectsSection';
+import ContactPage from '@/components/contact/ContactPage';
+import AboutGrid from '@/components/about/AboutGrid';
+import Navbar from './navs/Navbar';
+import Bottomnav from './navs/Bottomnav';
+import SnowCanvas from '@/components/Backgrounds/SnowCanvas';
+import SVGFlakeFall from '@/components/Backgrounds/SVGFlakeFall'
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show navbar when scrolling up
+      if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      }
+      // Hide navbar when scrolling down
+      else if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <SnowCanvas />
+      <SVGFlakeFall />
+      <div className="min-h-screen bg-[#161B1C] z-10">
+        <Navbar isVisible={isVisible} />
+        <Bottomnav isVisible={isVisible} />
+        {/* Main Content */}
+        <main className="pt-28 max-w-7xl mx-auto   md:px-6 py-20 pb-10">
+          <HeroSection />
+          <section id="about" className="text-white py-5 px-1 md:px-10 min-h-auto flex flex-col items-center justify-center">
+            <div className="mt-10 w-full flex justify-center">
+              <AboutGrid />
+            </div>
+          </section>
+          <ProjectsSection />
+          <ContactPage />
+        </main>
+      </div>
+    </>
   );
 }

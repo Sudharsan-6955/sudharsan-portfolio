@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+  <style>
+    text {
+      font-family: 'DSEG7 Classic', 'DSEG7Classic-Bold', monospace;
+      font-size: 32px;
+      fill: white;
+      letter-spacing: 4px;
+    }
+  </style>
+  <rect width="100%" height="100%" fill="transparent"/>
+  <text x="5" y="30">2023</text>
+</svg>

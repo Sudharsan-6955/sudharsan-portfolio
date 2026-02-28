@@ -1,0 +1,21 @@
+.gold-text {
+  background: linear-gradient(
+    135deg,
+    #9ca3af 44%,
+    #ffffff 48%,
+    #ffffff 52%,
+    #9ca3af 56%,
+    #afa69c 100%
+  );
+  background-size: 300% 300%;
+  background-position: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 2.2s linear infinite;
+}
+
+@keyframes textShine {
+  to {
+    background-position: 0% 0%;
+  }
+}

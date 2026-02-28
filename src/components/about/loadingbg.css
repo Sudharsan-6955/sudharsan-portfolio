@@ -1,0 +1,28 @@
+/* .orb-container {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  animation: rotateOrb 8s linear infinite;
+}
+
+.orb-container span {
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(45deg, #ff6ec4, #7873f5, #42e695);
+}
+
+.orb-container span:nth-child(1) { filter: blur(10px); }
+.orb-container span:nth-child(2) { filter: blur(20px); }
+.orb-container span:nth-child(3) { filter: blur(40px); }
+.orb-container span:nth-child(4) { filter: blur(80px); }
+
+@keyframes rotateOrb {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
