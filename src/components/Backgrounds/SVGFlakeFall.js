@@ -18,8 +18,13 @@ export default function SVGFlakeFall() {
       flake.style.position = "fixed";
       flake.style.left = `${Math.random() * 90 + 5}vw`;
       flake.style.top = "-40px";
-      // Randomize size between 12px and 24px
-      const size = Math.random() * 12 + 12;
+      // Randomize size, smaller on mobile
+      let size;
+      if (window.innerWidth <= 640) { // Tailwind's sm breakpoint
+        size = 1; // 1px for mobile
+      } else {
+        size = Math.random() * 12 + 12; // 12px to 24px for desktop
+      }
       flake.style.width = `${size}px`;
       flake.style.height = `${size}px`;
       flake.style.pointerEvents = "none";
