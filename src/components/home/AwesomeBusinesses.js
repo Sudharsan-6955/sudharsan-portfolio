@@ -210,10 +210,10 @@ export default function AwesomeBusinesses() {
           <h2 className="text-3xl md:text-3xl font-bold font-bricolage text-[#F2F2F2] mb-2">
             Awesome skills I’ve mastered.
           </h2>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm font-bricolage">
             My Journey as a Developer
           </p>
-          <p className="text-gray-500 text-xs mt-2">
+          <p className="text-gray-500 text-xs mt-2 font-bricolage">
             From learning the fundamentals to building every step shaped my growth in web development.
           </p>
         </div>
@@ -268,22 +268,22 @@ export default function AwesomeBusinesses() {
               <h3 className="text-lg font-semibold text-white font-satoshi">My Skills Philosophy</h3>
               <div className="flex flex-col gap-3 text-gray-300 text-sm">
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0 font-syne"></div>
                   <span>Building scalable, maintainable applications with clean code</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0 font-syne"></div>
                   <span>Constantly learning and adapting to new technologies</span>
                 </div>
 
               </div>
-              <p className="text-gray-400 text-xs">👉 Click any skill below to learn more details</p>
+              <p className="text-gray-400 text-xs font-bricolage">👉 Click any skill below to learn more details</p>
             </div>
           )}
         </div>
 
         {/* Skills Logos Grid */}
-        <div className="lg:flex-1 grid grid-cols-4 grid-rows-3 gap-4">
+        <div className="lg:flex-1 grid grid-cols-4 grid-rows-3 gap-4 font-bricolage">
           {Object.entries(skillsData).map(([key, skillData]) => {
             const count = btnClickCount[key] || 0;
             let animClass = '';

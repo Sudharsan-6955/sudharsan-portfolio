@@ -5,7 +5,7 @@ export default function ContactPage() {
         <h2 className="text-4xl font-unbounded md:text-5xl font-bold text-white mb-4">
           Contact me<span className="bg-orange-500 bg-clip-text text-transparent">.</span>
         </h2>
-        <p className="text-gray-400 text-base md:text-lg">A showcase of my creative projects and achievements</p>
+        <p className="text-gray-400 text-base md:text-lg font-bricolage">A showcase of my creative projects and achievements</p>
       </div>
       <section id="contact" className="min-h-auto md:mx-0 mx-2 border rounded-2xl border-gray-700 bg-black text-white py-12 px-1 relative z-10">
         

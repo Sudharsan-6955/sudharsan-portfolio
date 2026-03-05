@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const ThreeDCard = () => {
   return (
     <StyledWrapper>
-      <div className="parent">
+      <div className="parent font-bricolage">
         <div className="card">
           <div className="content-box">
             <span className="card-title ">Security Test</span>

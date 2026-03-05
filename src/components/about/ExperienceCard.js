@@ -68,16 +68,16 @@ const ExperienceCard = () => {
 
                     {/* Stats Grid */}
                     <div className="grid grid-cols-3 gap-2 w-full">
-                        <div className="rounded-lg p-2 flex flex-col items-center">
-                            <span className="text-xl font-bold text-yellow-400 ">42</span>
+                        <div className="rounded-lg p-2 flex flex-col items-center font-bricolage">
+                            <span className="text-xl font-bold text-yellow-400 ">160</span>
                             <span className="text-xs text-gray-300">Repos</span>
                         </div>
-                        <div className="rounded-lg p-2 flex flex-col items-center">
-                            <span className="text-xl font-bold text-blue-400">120</span>
+                        <div className="rounded-lg p-2 flex flex-col items-center font-bricolage">
+                            <span className="text-xl font-bold text-blue-400">40</span>
                             <span className="text-xs text-gray-300">LeetCode</span>
                         </div>
-                        <div className="rounded-lg p-2 flex flex-col items-center">
-                            <span className="text-xl font-bold text-green-400">85</span>
+                        <div className="rounded-lg p-2 flex flex-col items-center font-bricolage">
+                            <span className="text-xl font-bold text-green-400">25</span>
                             <span className="text-xs text-gray-300">GFG</span>
                         </div>
                     </div>
