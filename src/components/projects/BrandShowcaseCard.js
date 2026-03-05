@@ -8,12 +8,17 @@ export default function BrandShowcaseCard() {
           <img
             src="/Assets/Projects/Musicapp.svg"
             alt="Password Generator background"
-            className=" inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 pointer-events-none select-none z-0"
+            className=" inset-0 w-full h-full object-cover  pointer-events-none select-none z-0"
             aria-hidden="true"
           />
-          <div className="absolute right-2 bottom-2 z-20">
+          <a
+            href="https://music-player-sigma-dun.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute right-2 bottom-2 z-20 cursor-pointer"
+          >
             <GithubButton />
-          </div>
+          </a>
         </div>
 
         {/* Restaurant */}
@@ -21,33 +26,43 @@ export default function BrandShowcaseCard() {
           <img
             src="/Assets/Projects/Calc.svg"
             alt="Password Generator background"
-            className=" inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 pointer-events-none select-none z-0"
+            className=" inset-0 w-full h-full object-cover  pointer-events-none select-none z-0"
             aria-hidden="true"
           />
-          <div className="absolute right-2 bottom-2 z-20">
+          <a
+            href="https://multical-c.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute right-2 bottom-2 z-20 cursor-pointer"
+          >
             <GithubButton />
-          </div>
+          </a>
         </div>
 
 
         {/* Hotel Badge */}
         <div className="relative bg-ber-500 rounded-xl flex flex-col justify-between overflow-hidden min-h-[120px]">
           <img
-            src="/Assets/Projects/Passwordgen.svg"
+            src="/Assets/Projects/PasswordGen.svg"
             alt="Password Generator background"
-            className=" inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 pointer-events-none select-none z-0"
+            className=" inset-0 w-full h-full object-cover pointer-events-none select-none z-0"
             aria-hidden="true"
           />
-          <div className="absolute right-2 bottom-2 z-20">
+          <a
+            href="https://p-gen-one.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute right-2 bottom-2 z-20 cursor-pointer"
+          >
             <GithubButton />
-          </div>
+          </a>
         </div>
 
 
         {/* Warzone */}
-        <div className="bg-black rounded-xl p-3 flex flex-col justify-between border border-gray-700 overflow-hidden">
-          <div className="text-white font-bold text-xs mb-1">MY Projects</div>
-          <p className="text-gray-400 text-xs line-clamp-2">"Quick thinking matters"</p>
+        <div className="bg-black rounded-xl p-3 flex  flex-col justify-between border border-gray-700 overflow-hidden">
+          <div className="text-white font-bold text-xs md:text-base  text-center ">MY Projects</div>
+          <p className="text-gray-400 text-xs  text-center">"View My Work"</p>
           <a
             href="https://github.com/Sudharsan-6955"
             target="_blank"

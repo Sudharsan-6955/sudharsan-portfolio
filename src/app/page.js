@@ -8,7 +8,9 @@ import AboutGrid from '@/components/about/AboutGrid';
 import Navbar from './navs/Navbar';
 import Bottomnav from './navs/Bottomnav';
 import SnowCanvas from '@/components/Backgrounds/SnowCanvas';
-import SVGFlakeFall from '@/components/Backgrounds/SVGFlakeFall'
+import SVGFlakeFall from '@/components/Backgrounds/SVGFlakeFall';
+import { SnowflakeProvider } from '@/contexts/SnowflakeContext';
+
 export default function Home() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -34,7 +36,7 @@ export default function Home() {
   }, [lastScrollY]);
 
   return (
-    <>
+    <SnowflakeProvider>
       <SnowCanvas />
       <SVGFlakeFall />
       <div className="min-h-screen bg-[#161B1C] z-10">
@@ -52,6 +54,6 @@ export default function Home() {
           <ContactPage />
         </main>
       </div>
-    </>
+    </SnowflakeProvider>
   );
 }

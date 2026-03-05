@@ -195,26 +195,26 @@ export default function AwesomeBusinesses() {
         <div className="animate-marquee inline-block whitespace-nowrap text-sm text-gray-400 font-[--font-space-grotesk]">
           DAD ∞ SKY DIVER ∞ HIKER ∞ NATURE LOVER ∞ HUSBAN ∞ GEEK ∞ CAT DAD ∞ SKY DIVER ∞ HIKER ∞ NATURE LOVER ∞ HUSBAN ∞ GEEK ∞ CAT DAD ∞ SKY DIVER ∞ HIKER ∞ NATURE LOVER ∞ HUSBAN ∞ GEEK
         </div>
-      </div> */}
+      </div> Core Knowledge → Applied Development → Advanced Engineering*/}
 
       {/* Title */}
       <div>
-        <div className="flex items-center gap-2 mb-4 text-gray-400 text-sm font-[--font-space-grotesk] font-medium">
-          <span>I GEEK</span>
+        <div className="flex items-center gap-2 mb-4 text-gray-400 text-sm font-satoshi font-medium">
+          <span>Core Knowledge</span>
           <span className="text-gray-600">∞</span>
-          <span>CAT DAD</span>
+          <span>Applied Development</span>
           <span className="text-gray-600">∞</span>
-          <span>SKY DIVER</span>
+          <span>Advanced Engineering</span>
         </div>
         <div>
-          <h2 className="text-3xl md:text-3xl font-bold font-bricolage text-white mb-2">
-            I have studied, professionally.
+          <h2 className="text-3xl md:text-3xl font-bold font-bricolage text-[#F2F2F2] mb-2">
+            Awesome skills I’ve mastered.
           </h2>
           <p className="text-gray-400 text-sm">
-            Awesome businesses I've worked with
+            My Journey as a Developer
           </p>
           <p className="text-gray-500 text-xs mt-2">
-            From small businesses to big brands, I've done this before!
+            From learning the fundamentals to building every step shaped my growth in web development.
           </p>
         </div>
       </div>
@@ -265,7 +265,7 @@ export default function AwesomeBusinesses() {
             </>
           ) : (
             <div className="flex flex-col gap-4">
-              <h3 className="text-lg font-semibold text-white font-[--font-space-grotesk]">My Skills Philosophy</h3>
+              <h3 className="text-lg font-semibold text-white font-satoshi">My Skills Philosophy</h3>
               <div className="flex flex-col gap-3 text-gray-300 text-sm">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0"></div>

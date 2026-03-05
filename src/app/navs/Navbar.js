@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import { useSnowflakes } from '@/contexts/SnowflakeContext';
+
 
 
 function NavLinks() {
@@ -113,10 +115,12 @@ function DecryptedText({ text }) {
 }
 
 export default function Navbar({ isVisible }) {
+  const { isActive, toggleSnowflakes } = useSnowflakes();
+
   return (
     <>
       {/* Top Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 bg-[#151417] shadow-lg border-b border-white/10 transition-transform duration-300 z-50 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+      <nav className={`fixed top-0 left-0 right-0 bg-[#151417]/60 backdrop-blur-sm shadow-2xl  transition-transform duration-300 z-50 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="max-w-7xl mx-auto px-6 py-3">
           <div className="flex justify-around items-center pb-1">
             {/* Logo and Name */}
@@ -129,17 +133,22 @@ export default function Navbar({ isVisible }) {
               <NavLinks />
             {/* Social Icons */}
             <div className="flex gap-3 items-center group">
-              {/* Star Icon */}
+              {/* Star Icon - Toggle Snowflakes */}
               <div className="relative">
-                <a
-                  href="#"
-                  className="peer text-gray-400 hover:text-yellow-400 transition-colors duration-200"
-                  aria-label="Favorite"
+                <button
+                  onClick={toggleSnowflakes}
+                  className={`transition-all duration-300 ${
+                    isActive 
+                      ? 'text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]' 
+                      : 'text-gray-400 hover:text-yellow-400'
+                  }`}
+                  aria-label="Toggle snowflakes"
+                  title="Toggle snowflakes"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
-                </a>
+                </button>
               </div>
 
               {/* Email Icon */}

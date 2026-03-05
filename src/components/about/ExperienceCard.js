@@ -5,8 +5,9 @@ function BloomingDescription() {
     return (
         <div className="text-center" style={{ borderRadius: '1rem', padding: '0.5rem' }}>
             <p className="text-base text-white font-syne">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vel reprehenderit ipsa eligendi, quod aliquid delectus tempore. Iste, consectetur facere?
-            </p>
+                MERN Stack Developer with hands-on experience building real-world applications.
+                Strong in problem-solving and writing clean, scalable code.
+                Ready to contribute and grow with real-world projects.                </p>
         </div>
     );
 }
@@ -34,7 +35,7 @@ const ExperienceCard = () => {
                     className="relative z-10 w-full h-full "
                     style={{
                         borderRadius: "1rem",
-                        padding: "1.5rem"
+                        padding: "1rem"
                     }}
                 >
                     {/* Profile Photo & Name/Title in Row */}

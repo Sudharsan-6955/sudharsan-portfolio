@@ -41,9 +41,8 @@ export default function BrandInfo() {
 
         </div>
         <p className="text-gray-400 text-sm leading-relaxed flex-1 font-syne">
-          Snapping ideas into powerful, scalable backend systems with the speed of Node.js.
-          Crafting dynamic, fast, and interactive web experiences using modern.
-        </p>
+          Building backend systems with Node.js, creating secure APIs, managing databases, authentication, ensuring scalable & secure & performance.
+          </p>
 
       </div>
 

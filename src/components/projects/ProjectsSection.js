@@ -15,8 +15,8 @@ export default function ProjectsSection() {
 
   const testimonials = [
     {
-      name: "Tom Mellows",
-      role: "CEO",
+      name: "Sundar",
+      // role: "marketing engineer",
       rating: 5,
       feedback: "Sudharsan was polite, courteous, and professional. He was also punctual. Highly recommend him and would work with him again. Cheers!",
       avatar: "👨‍💼",

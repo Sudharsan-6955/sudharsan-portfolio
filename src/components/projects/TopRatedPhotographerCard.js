@@ -6,14 +6,19 @@ export default function TopRatedPhotographerCard() {
       <img
         src="/Assets/Projects/E-Com.svg"
         alt="E-Commerce background"
-        className="absolute inset-0 w-full h-full object-cover  rounded-2xl group-hover:opacity-100 opacity-60 pointer-events-none select-none z-0"
+        className="absolute inset-0 w-full h-full object-cover  rounded-2xl  pointer-events-none select-none z-0"
         aria-hidden="true"
       />
 
       {/* GitHub Button - bottom right */}
-      <div className="absolute right-2 bottom-2 z-20 md:right-5 md:bottom-5">
-        <GithubButton />
-      </div>
+       <a
+            href="https://e-commerce-tau-six-31.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute right-2 bottom-2 z-20 cursor-pointer"
+          >
+            <GithubButton />
+          </a>
     </div>
   );
 }
