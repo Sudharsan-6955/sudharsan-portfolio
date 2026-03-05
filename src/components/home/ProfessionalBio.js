@@ -98,7 +98,7 @@ export default function ProfessionalBio() {
 
                             <span className="text-red-500 font-bold"> Web Applications.</span>
                         </p>
-                        <button className="ml-6 gold-text bg-gray-800 hover:bg-gray-700 text-white px-1 md:px-2 py-3 rounded-full text-sm font-medium transition-colors flex items-center gap-2 whitespace-nowrap">
+                        <button className="ml-6 font-syne gold-text bg-gray-800 hover:bg-gray-700 text-white px-1 md:px-2 py-3 rounded-full text-sm font-medium transition-colors flex items-center gap-2 whitespace-nowrap">
                             Make it fly!
                             <Image src="/Assets/Educat/rocket.svg" alt="rocket" className="md:h-5 h-3 w-auto" width={20} height={20} />
                         </button>

@@ -10,7 +10,7 @@ export default function BrandInfo() {
             <p className="text-sm text-gray-400 mb-1 font-syne">Coder's say</p>
             <div className="flex items-center gap-3">
               <h3 className="text-white font-bold font-syne text-xl tracking-tighter" >
-                Node<span className="text-[#FF9900]"> Snap</span>
+                JS<span className="text-[#FF9900]"> Snap</span>
               </h3>
             </div>
           </div>
@@ -20,10 +20,8 @@ export default function BrandInfo() {
 
           </div>
         </div>
-        <p className="text-gray-400 text-sm leading-relaxed flex-1">
-          Crafting dynamic, fast, and interactive web experiences using modern JavaScript technologies.Crafting dynamic, fast, and interactive web experiences using modern JavaScript technologies.
-          
-
+        <p className="text-gray-400 text-sm leading-relaxed flex-1 font-syne">
+          Leveraging JavaScript as the foundation of modern web development to build scalable, secure, and high-performance applications, powering dynamic frontend interfaces, efficient backend services, optimized APIs, and reliable system architecture.
         </p>
       </div>
 
@@ -42,7 +40,7 @@ export default function BrandInfo() {
         </div>
         <p className="text-gray-400 text-sm leading-relaxed flex-1 font-syne">
           Building backend systems with Node.js, creating secure APIs, managing databases, authentication, ensuring scalable & secure & performance.
-          </p>
+        </p>
 
       </div>
 
