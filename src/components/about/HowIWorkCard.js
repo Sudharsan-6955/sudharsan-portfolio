@@ -26,75 +26,128 @@ const steps = [
 const HowIWorkCard = () => {
     const [activeStep, setActiveStep] = useState(null);
     const [animateKey, setAnimateKey] = useState(0);
-    const [menuOpen, setMenuOpen] = useState(false);
+    const isDefaultView = activeStep === null;
+    const isFirstStep = activeStep === 0;
+    const isLastStep = activeStep === steps.length - 1;
+
+    const handlePrevStep = () => {
+        if (isDefaultView || isFirstStep) return;
+        setActiveStep((prev) => prev - 1);
+        setAnimateKey((prev) => prev + 1);
+    };
+
+    const handleNextStep = () => {
+        if (isDefaultView) {
+            setActiveStep(0);
+            setAnimateKey((prev) => prev + 1);
+            return;
+        }
+        if (isLastStep) return;
+        setActiveStep((prev) => prev + 1);
+        setAnimateKey((prev) => prev + 1);
+    };
+
     return (
-        <div className="row-span-2 col-span-1 bg-[#151417] md:col-span-2 rounded-2xl border-[3px] overflow-hidden shadow-2xl relative">
-            {/* Top bar with label and hamburger */}
-            <div className="flex items-center justify-between m-4 relative">
-                <div className="p-2 rounded-full text-sm md:text-xl text-center font-semibold font-unbounded z-10 w-fit shadow-sm"> <span className="text-[#FF9900]">How I Work </span>Understand requirements, create designs, develop features, optimize, and deploy confidently.</div>
-                {/* Hamburger for mobile */}
-                <div className="block sm:hidden absolute right-2 top-1">
-                    <button
-                        className="flex flex-col justify-center items-center w-6 h-6 rounded-md cursor-pointer  text-orange-700 shadow-sm focus:outline-none ml-1 relative"
-                        onClick={() => setMenuOpen((open) => !open)}
-                        aria-label="Open steps menu"
-                        style={{ boxShadow: '0 1px 6px 0 rgba(255, 140, 0, 0.08)' }}
-                    >
-                        <span
-                            className={`block w-3.5 h-0.5 bg-orange-700 rounded absolute transition-transform duration-300 ${menuOpen ? 'rotate-45 top-3 left-1.5' : 'top-1 left-1.5'}`}
-                            style={{ top: menuOpen ? '12px' : '4px', left: '6px' }}
-                        ></span>
-                        <span
-                            className={`block w-3.5 h-0.5 bg-orange-700 rounded absolute transition-all duration-300 ${menuOpen ? 'opacity-0' : 'top-2 left-1.5'}`}
-                            style={{ top: '10px', left: '6px', opacity: menuOpen ? 0 : 1 }}
-                        ></span>
-                        <span
-                            className={`block w-3.5 h-0.5 bg-orange-700 rounded absolute transition-transform duration-300 ${menuOpen ? '-rotate-45 top-3 left-1.5' : 'top-3 left-1.5'}`}
-                            style={{ top: menuOpen ? '12px' : '16px', left: '6px' }}
-                        ></span>
-                    </button>
-                    {menuOpen && (
-                        <div
-                            className="absolute right-0 mt-1 w-28 flex flex-col gap-1 rounded-xl shadow-xl p-2 animate-fade-in z-30 border border-orange-100 overflow-y-auto orange-scrollbar"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(255,247,237,0.95) 60%, rgba(255,186,80,0.18) 100%)',
-                                backdropFilter: 'blur(6px)',
-                                boxShadow: '0 4px 24px 0 rgba(255, 140, 0, 0.13)',
-                                maxHeight: '120px'
-                            }}
-                        >
-                            {steps.map((step, idx) => (
-                                <button
-                                    key={idx}
-                                    className={`rounded px-2 py-1 text-[11px] font-medium focus:outline-none transition-all duration-200 border border-transparent text-left ${activeStep === idx ? 'bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300 text-white shadow scale-105' : 'bg-white/70 text-orange-700 hover:bg-gradient-to-r hover:from-orange-400 hover:via-orange-500 hover:to-orange-400 hover:text-white hover:border-orange-300'}`}
-                                    style={activeStep === idx ? {
-                                        boxShadow: '0 2px 8px 0 rgba(255, 140, 0, 0.18)',
-                                    } : {}}
-                                    onClick={() => {
-                                        setActiveStep(idx);
-                                        setAnimateKey(prev => prev + 1);
-                                        setMenuOpen(false);
-                                    }}
-                                >
-                                    Step {String(idx + 1).padStart(2, '0')}
-                                </button>
-                            ))}
-                        </div>
-                    )}
+        <div className="row-span-2 col-span-1 bg-[#151417] md:col-span-2 rounded-2xl border border-gray-700 overflow-hidden shadow-2xl relative">
+            {/* Top bar with label */}
+            <div className="flex items-center justify-between m-4">
+                <div className="p-2 rounded-full text-sm md:text-xl text-center font-semibold font-unbounded z-10 w-fit shadow-sm">
+                    <span className="text-[#FF9900]">How I Work </span>
+                    Understand requirements, create designs, develop features, optimize, and deploy confidently.
                 </div>
             </div>
             <div className="mt-4 p-4 min-h-27.5 transition-all duration-300">
-                {activeStep === null ? (
-                    <div className="flex flex-col items-center justify-center h-full text-center animate-fade-in">
-                        <span className="text-2xl font-satoshi font-semibold text-red-500 mb-1">See the steps</span>
-                        <span className="text-sm text-gray-500">Click a step below to learn more about my process.</span>
+                {/* Mobile carousel with arrows */}
+                <div className="block sm:hidden">
+                    <div className="flex items-start justify-between gap-2">
+                        {isDefaultView || isFirstStep ? (
+                            <div className="w-8 h-8 shrink-0" />
+                        ) : (
+                            <button
+                                onClick={handlePrevStep}
+                                className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full  text-gray-200 hover:bg-white/10 transition-all duration-200"
+                                aria-label="Previous step"
+                            >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                        )}
+                        <div key={animateKey} className="flex-1 min-w-0 transition-all duration-300 animate-fade-in">
+                            {isDefaultView ? (
+                                <div className="py-1 text-center">
+                                    <h1 className="text-[15px] leading-5 font-bold mb-1 font-satoshi text-red-500 animate-slide-in-left">
+                                        See the steps
+                                    </h1>
+                                    <p className="py-0.5 text-xs leading-5 text-white/95 font-satoshi animate-slide-in-bottom">
+                                        Tap the right arrow or a step button to explore my workflow.
+                                    </p>
+                                </div>
+                            ) : (
+                                <>
+                                    <h1 className="text-[15px] leading-5 font-bold mb-1 font-satoshi text-red-500 animate-slide-in-left">
+                                        {steps[activeStep].title}
+                                    </h1>
+                                    <p className="py-0.5 text-xs leading-5 text-white/95 font-satoshi animate-slide-in-bottom">
+                                        {steps[activeStep].desc}
+                                    </p>
+                                </>
+                            )}
+                        </div>
+                        {(isDefaultView || !isLastStep) && (
+                            <button
+                                onClick={handleNextStep}
+                                className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full  text-gray-200 hover:bg-white/10 transition-all duration-200"
+                                aria-label="Next step"
+                            >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        )}
                     </div>
-                ) : (
+                    {/* Step indicator dots */}
+                    <div className="flex justify-center gap-1.5 mt-3">
+                        {steps.map((_, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => {
+                                    setActiveStep(idx);
+                                    setAnimateKey((prev) => prev + 1);
+                                }}
+                                className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                                    activeStep === idx ? 'bg-orange-500 w-6' : 'bg-gray-400'
+                                }`}
+                                aria-label={`Go to step ${idx + 1}`}
+                            />
+                        ))}
+                    </div>
+                </div>
+                
+                {/* Desktop/tablet content */}
+                <div className="hidden sm:block">
                     <div key={animateKey} className="transition-all px-4 duration-300 animate-fade-in">
-                        <h1 className={`text-lg sm:text-xl font-bold mb-1 font-satoshi text-red-500 animate-slide-in-left`}>{steps[activeStep].title}</h1>
-                        <p className={`py-0.5 text-xs sm:text-base text-white font-satoshi animate-slide-in-bottom`}>{steps[activeStep].desc}</p>
+                        {isDefaultView ? (
+                            <div className="flex flex-col items-center justify-center h-full text-center py-2">
+                                <h1 className="text-lg sm:text-xl font-bold mb-1 font-satoshi text-red-500 animate-slide-in-left">
+                                    See the steps
+                                </h1>
+                                <p className="py-0.5 text-xs sm:text-base text-white font-satoshi animate-slide-in-bottom">
+                                    Click any step button below to learn more about my process.
+                                </p>
+                            </div>
+                        ) : (
+                            <>
+                                <h1 className="text-lg sm:text-xl font-bold mb-1 font-satoshi text-red-500 animate-slide-in-left">
+                                    {steps[activeStep].title}
+                                </h1>
+                                <p className="py-0.5 text-xs sm:text-base text-white font-satoshi animate-slide-in-bottom">
+                                    {steps[activeStep].desc}
+                                </p>
+                            </>
+                        )}
                     </div>
-                )}
+                </div>
             </div>
             {/* Step buttons for desktop/tablet */}
             <div className="py-3 sm:py-5 gap-2 justify-around hidden sm:flex flex-wrap">

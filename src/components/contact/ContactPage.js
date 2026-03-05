@@ -3,7 +3,7 @@ export default function ContactPage() {
     <>
       <div className="mb-8 md:text-start text-center px-7 z-10  relative">
         <h2 className="text-4xl font-unbounded md:text-5xl font-bold text-white mb-4">
-          Cantact me<span className="bg-orange-500 bg-clip-text text-transparent">.</span>
+          Contact me<span className="bg-orange-500 bg-clip-text text-transparent">.</span>
         </h2>
         <p className="text-gray-400 text-base md:text-lg">A showcase of my creative projects and achievements</p>
       </div>

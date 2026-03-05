@@ -4,7 +4,7 @@ export default function MobileDesignCard() {
     <div className="relative bg-[#151417] rounded-2xl p-6 pb-2 hover:pb-6 border border-gray-700 hover:border-gray-500 transition-all duration-300 group overflow-hidden">
       <div className="absolute left-2 bottom-2 z-20 md:left-5 md:bottom-5">
         <a
-          href="https://github.com/temporary/repo"
+          href="https://lms-frontend-omega-eight.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Go to GitHub repository"
@@ -17,7 +17,7 @@ export default function MobileDesignCard() {
       <img
         src="/Assets/Projects/LMS.svg"
         alt="LMS background"
-        className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 pointer-events-none select-none z-0"
+        className="absolute inset-0 w-full h-full object-cover  pointer-events-none select-none z-0"
         aria-hidden="true"
       />
       {/* 
@@ -40,7 +40,7 @@ export default function MobileDesignCard() {
       {/* GitHub Button - bottom right */}
       <div className="absolute right-2 bottom-2 z-20 md:right-5 md:bottom-5">
         <a
-          href="https://github.com/temporary/repo"
+          href="https://lms-frontend-omega-eight.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Go to GitHub repository"
