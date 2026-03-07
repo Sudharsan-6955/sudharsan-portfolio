@@ -3,9 +3,9 @@ export default function ContactPage() {
     <>
       <div className="mb-8 md:text-start text-center px-7 z-10  relative">
         <h2 className="text-4xl font-unbounded md:text-5xl font-bold text-white mb-4">
-          Cantact me<span className="bg-orange-500 bg-clip-text text-transparent">.</span>
+          Contact me<span className="bg-orange-500 bg-clip-text text-transparent">.</span>
         </h2>
-        <p className="text-gray-400 text-base md:text-lg">A showcase of my creative projects and achievements</p>
+        <p className="text-gray-400 text-base md:text-lg font-bricolage">A showcase of my creative projects and achievements</p>
       </div>
       <section id="contact" className="min-h-auto md:mx-0 mx-2 border rounded-2xl border-gray-700 bg-black text-white py-12 px-1 relative z-10">
         
@@ -79,19 +79,31 @@ export default function ContactPage() {
 
             {/* Center - Contact Icons */}
             <div className="flex justify-center gap-3 px-7 items-end">
-              <a href="mailto:salman@example.com" className="text-gray-400 hover:text-white transition-colors">
+              <a href="mailto:sudharsan638294@gmail.com" className="text-gray-400 hover:text-white transition-colors" aria-label="Email">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
               </a>
-              <a href="https://twitter.com" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="https://www.linkedin.com/in/sudharsan-dev"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                  <path d="M6.94 8.5a2.13 2.13 0 110-4.26 2.13 2.13 0 010 4.26zM5.2 9.98h3.5v9.82H5.2V9.98zm5.52 0h3.36v1.34h.05c.47-.89 1.62-1.83 3.34-1.83 3.57 0 4.23 2.35 4.23 5.4v6.91h-3.5v-6.13c0-1.46-.03-3.34-2.03-3.34-2.04 0-2.35 1.59-2.35 3.24v6.23h-3.5V9.98z" />
                 </svg>
               </a>
-              <a href="https://instagram.com" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="https://github.com/Sudharsan-6955"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.265-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm4.965-10.322a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                  <path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.92 0-1.08.38-1.96 1.02-2.65-.11-.25-.45-1.27.1-2.64 0 0 .83-.27 2.72 1.01a9.4 9.4 0 014.96 0c1.89-1.28 2.72-1.01 2.72-1.01.55 1.37.21 2.39.11 2.64.63.69 1.01 1.57 1.01 2.65 0 3.82-2.34 4.67-4.57 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0012 2z" />
                 </svg>
               </a>
             </div>

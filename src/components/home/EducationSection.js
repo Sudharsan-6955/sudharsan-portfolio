@@ -24,9 +24,9 @@ export default function EducationSection() {
       <div className="absolute -top-8 left-6 text-2xl text-gray-700 opacity-40">❄ </div>
       <div className="absolute bottom-10 -right-4 text-2xl text-gray-700 opacity-40">❄</div>
       <div className='pt-5 flex justify-between md:px-0 px-5'>
-        <h5 className="text-white font-bold text-2xl md:text-3xl font-bricolage">
-          I've studied, <br />
-          professionally.
+        <h5 className="text-[#F2F2F2] font-bold text-2xl md:text-3xl font-bricolage">
+          My Education  <br />
+          Journey.
         </h5>
         <div className=''>
           {/* <Image src="/Assets/Educat/degree.svg" alt="degree" width={20} height={20} className="h-24 w-24" /> */}

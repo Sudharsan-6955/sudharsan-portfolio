@@ -22,19 +22,17 @@ export default function TestimonialsCard({ testimonials, activeTestimonial, setA
                 <h4 className="text-white font-bold text-xs truncate">{testimonials[activeTestimonial].name}</h4>
                 <button className="text-gray-500 text-lg shrink-0">×</button>
               </div>
-              <p className="text-gray-400 text-xs mb-0.5 truncate">{testimonials[activeTestimonial].role}</p>
               <div className="text-yellow-400 text-xs">{'⭐'.repeat(testimonials[activeTestimonial].rating)}</div>
             </div>
           </div>
           
-          <p className="text-gray-300 text-xs leading-tight mb-2 line-clamp-3">
+          <p className="text-gray-300 text-xs leading-tight mb-4 pt-4 line-clamp-3">
             {testimonials[activeTestimonial].feedback}
           </p>
 
-          <div className="flex justify-between items-center text-xs">
-            <button className="text-gray-500 truncate">😊 peter</button>
+          {/* <div className="flex justify-between items-center text-xs">
             <button className="text-gray-500 shrink-0">next →</button>
-          </div>
+          </div> */}
         </div>
 
         {/* Navigation Dots */}

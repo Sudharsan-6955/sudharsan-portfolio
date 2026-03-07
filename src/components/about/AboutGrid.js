@@ -24,7 +24,7 @@ const AboutGrid = () => {
                         About me<span className="text-orange-500">.</span>
                     </h1>
                 </div>
-                <button className="bg-black text-white px-7 py-3 rounded-2xl text-xs md:text-lg font-semibold shadow-lg hover:bg-gray-900 transition w-fit">Book a call</button>
+                <button className="bg-black text-white px-7 py-3 rounded-2xl text-xs md:text-lg font-semibold shadow-lg hover:bg-gray-900 transition w-fit">Let’s Work Together</button>
 
             </div>
             <div className="flex flex-col md:flex-row md:items-center items-center md:justify-between gap-4 md:mb-8">

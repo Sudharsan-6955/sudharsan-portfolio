@@ -5,13 +5,12 @@ import styled from 'styled-components';
 const ThreeDCard = () => {
   return (
     <StyledWrapper>
-      <div className="parent">
+      <div className="parent font-bricolage">
         <div className="card">
           <div className="content-box">
-            <span className="card-title ">3D Card</span>
+            <span className="card-title ">Security Test</span>
             <p className="card-content ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              “ While testing my backend, I intentionally sent invalid data and simulated CORS attacks to ensure my API security was strong. ”
 
             </p>
             <span className="see-more">See More</span>

@@ -6,7 +6,7 @@ export default function PrintOnWallCard() {
       <img
         src="/Assets/Projects/rajsurgical.svg"
         alt="Raj Surgical background"
-        className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none z-0"
+        className="absolute inset-0 w-full h-full object-cover   pointer-events-none select-none z-0"
         aria-hidden="true"
       />
 
@@ -33,9 +33,14 @@ export default function PrintOnWallCard() {
         </a>
       </div> */}
       {/* GitHub Button - bottom right */}
-      <div className="absolute right-2 bottom-2 z-20 md:right-5 md:bottom-5">
-        <GithubButton />
-      </div>
+       <a
+            href="https://rajsurgical.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute right-2 bottom-2 z-20 cursor-pointer"
+          >
+            <GithubButton />
+          </a>
     </div>
   );
 }

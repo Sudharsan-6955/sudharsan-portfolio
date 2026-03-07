@@ -4,7 +4,7 @@ export default function NaturePhotoCard() {
     <div className="relative bg-[#151417] rounded-2xl overflow-hidden border border-gray-700  transition-all duration-300 group row-span-2">
       <div className="absolute left-2 bottom-2 z-20 md:left-5 md:bottom-5">
         <a
-          href="https://github.com/temporary/repo"
+          href="https://rajsurgical.vercel.app/products/search"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Go to GitHub repository"
@@ -16,12 +16,17 @@ export default function NaturePhotoCard() {
       <img
         src="/Assets/Projects/Product.svg"
         alt="Password Generator background"
-        className="absolute inset-0 w-full h-full object-cover  opacity-60 group-hover:opacity-100 pointer-events-none select-none z-0"
+        className="absolute inset-0 w-full h-full object-cover   pointer-events-none select-none z-0"
         aria-hidden="true"
       />
-      <div className="absolute right-2 bottom-2 z-20 md:right-5 md:bottom-5">
-        <GithubButton />
-      </div>
+       <a
+            href="https://rajsurgical.vercel.app/products/search"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute right-2 bottom-2 z-20 cursor-pointer"
+          >
+            <GithubButton />
+          </a>
     </div>
   );
 }

@@ -40,7 +40,7 @@ export default function ProfessionalBio() {
                 <div className="flex flex-col p-3 ">
                     {/* Senior UX designer */}
                     <div className="flex justify-between pb-1 md:pb-0 items-start md:gap-6">
-                        <h3 className="text-xl  md:text-5xl font-bold text-white leading-tight flex-1 font-unbounded">
+                        <h3 className="text-xl  md:text-5xl font-bold text-[#F2F2F2] leading-tight flex-1 font-unbounded">
                             MERN Developer<span className="text-orange-500">.</span>
                         </h3>
                         <div className="hii text-right whitespace-nowrap md:pt-2 flex items-center  gap-2">
@@ -53,7 +53,7 @@ export default function ProfessionalBio() {
 
                     {/* Webflow developer */}
                     <div className="flex justify-between pb-1 md:pb-0 items-start md:gap-6">
-                        <h3 className="text-xl md:text-5xl font-bold text-white leading-tight flex-1 font-unbounded">
+                        <h3 className="text-xl md:text-5xl font-bold text-[#F2F2F2] leading-tight flex-1 font-unbounded">
                             Backend Developer<span className="text-orange-500">.</span>
                         </h3>
                         <div className="hii text-right whitespace-nowrap md:pt-2 flex items-center  gap-2">
@@ -66,7 +66,7 @@ export default function ProfessionalBio() {
 
                     {/* Photographer */}
                     <div className="flex justify-between pb-1 md:pb-0 items-start md:gap-6">
-                        <h3 className="text-xl md:text-5xl font-bold text-white leading-tight flex-1 font-unbounded">
+                        <h3 className="text-xl md:text-5xl font-bold text-[#F2F2F2] leading-tight flex-1 font-unbounded">
                             Frontend Creater<span className="text-orange-500">.</span>
                         </h3>
                         <div className="hii text-right whitespace-nowrap md:pt-2 flex items-center  gap-2">
@@ -80,7 +80,7 @@ export default function ProfessionalBio() {
                     {/* Creative */}
                     <div className="flex justify-between items-start md:gap-6">
                         <div className="relative inline-block overflow-hidden">
-                            <h3 className="text-xl md:text-5xl font-bold text-white leading-tight flex-1 font-unbounded">
+                            <h3 className="text-xl md:text-5xl font-bold text-[#F2F2F2] leading-tight flex-1 font-unbounded">
                                 Creative<span className="text-orange-500">.</span>
                             </h3>
                         </div>
@@ -98,7 +98,7 @@ export default function ProfessionalBio() {
 
                             <span className="text-red-500 font-bold"> Web Applications.</span>
                         </p>
-                        <button className="ml-6 gold-text bg-gray-800 hover:bg-gray-700 text-white px-1 md:px-2 py-3 rounded-full text-sm font-medium transition-colors flex items-center gap-2 whitespace-nowrap">
+                        <button className="ml-6 font-syne gold-text bg-gray-800 hover:bg-gray-700 text-white px-1 md:px-2 py-3 rounded-full text-sm font-medium transition-colors flex items-center gap-2 whitespace-nowrap">
                             Make it fly!
                             <Image src="/Assets/Educat/rocket.svg" alt="rocket" className="md:h-5 h-3 w-auto" width={20} height={20} />
                         </button>
