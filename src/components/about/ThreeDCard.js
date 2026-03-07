@@ -62,7 +62,7 @@ const StyledWrapper = styled.div`
   }
 
   .content-box {
-    background: rgba(4, 193, 250, 0.85);
+    background: rgba(107, 114, 128, 0.85);
     border-radius: 12px;
     transition: all 0.5s cubic-bezier(.25,.8,.25,1);
     padding: 60px 25px 25px 25px;
@@ -104,7 +104,7 @@ const StyledWrapper = styled.div`
     font-weight: 900;
     font-size: 9px;
     text-transform: uppercase;
-    color: rgb(7, 185, 255);
+    color: rgb(75, 85, 99);
     /* border-radius: 5px; */
     background: white;
     padding: 0.5rem 0.9rem;
@@ -124,7 +124,7 @@ const StyledWrapper = styled.div`
     height: 56px;
     width: 56px;
     background: white;
-    border: 1.5px solid rgb(7, 185, 255);
+    border: 1.5px solid rgb(107, 114, 128);
     border-radius: 0px;
     padding: 8px;
     transform: translate3d(0px, 0px, 80px);
@@ -142,7 +142,7 @@ const StyledWrapper = styled.div`
   }
 
   .date-box .month {
-    color: rgb(4, 193, 250);
+    color: rgb(107, 114, 128);
     font-size: 9px;
     font-weight: 700;
   }
@@ -150,7 +150,7 @@ const StyledWrapper = styled.div`
   .date-box .date {
     font-size: 20px;
     font-weight: 900;
-    color: rgb(4, 193, 250);
+    color: rgb(107, 114, 128);
   }`;
 
 export default ThreeDCard;
