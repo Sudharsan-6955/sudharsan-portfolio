@@ -39,10 +39,11 @@ const AboutGrid = () => {
             {/* Grid Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-4 gap-4 w-full h-auto min-h-150">
                 <ExperienceCard />
+                 <HowIWorkCard />
                 <Repocard />
                 <ReadingCard />
                 <MapCard />
-                <HowIWorkCard />
+               
             </div>
         </div>
     );
