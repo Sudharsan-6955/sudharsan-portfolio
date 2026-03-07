@@ -34,7 +34,7 @@ export default function PrintOnWallCard() {
       </div> */}
       {/* GitHub Button - bottom right */}
        <a
-            href="https://music-player-sigma-dun.vercel.app/"
+            href="https://rajsurgical.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="absolute right-2 bottom-2 z-20 cursor-pointer"
