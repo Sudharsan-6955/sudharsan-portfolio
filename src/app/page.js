@@ -8,8 +8,30 @@ import AboutGrid from '@/components/about/AboutGrid';
 import Navbar from './navs/Navbar';
 import Bottomnav from './navs/Bottomnav';
 import SnowCanvas from '@/components/Backgrounds/SnowCanvas';
-import SVGFlakeFall from '@/components/Backgrounds/SVGFlakeFall';
-import { SnowflakeProvider } from '@/contexts/SnowflakeContext';
+import { SnowflakeProvider, useSnowflakes } from '@/contexts/SnowflakeContext';
+
+function HomeContent({ isVisible }) {
+  const { isActive } = useSnowflakes();
+
+  return (
+    <div className="min-h-screen bg-[#161B1C] z-10">
+      {isActive ? <SnowCanvas /> : null}
+      <Navbar isVisible={isVisible} />
+      <Bottomnav isVisible={isVisible} />
+      {/* Main Content */}
+      <main className="pt-28 max-w-7xl mx-auto   md:px-6 py-20 pb-10">
+        <HeroSection />
+        <section id="about" className="text-white py-5 px-1 md:px-10 min-h-auto flex flex-col items-center justify-center">
+          <div className="mt-10 w-full flex justify-center">
+            <AboutGrid />
+          </div>
+        </section>
+        <ProjectsSection />
+        <ContactPage />
+      </main>
+    </div>
+  );
+}
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(true);
@@ -37,23 +59,7 @@ export default function Home() {
 
   return (
     <SnowflakeProvider>
-      <SnowCanvas />
-      <SVGFlakeFall />
-      <div className="min-h-screen bg-[#161B1C] z-10">
-        <Navbar isVisible={isVisible} />
-        <Bottomnav isVisible={isVisible} />
-        {/* Main Content */}
-        <main className="pt-28 max-w-7xl mx-auto   md:px-6 py-20 pb-10">
-          <HeroSection />
-          <section id="about" className="text-white py-5 px-1 md:px-10 min-h-auto flex flex-col items-center justify-center">
-            <div className="mt-10 w-full flex justify-center">
-              <AboutGrid />
-            </div>
-          </section>
-          <ProjectsSection />
-          <ContactPage />
-        </main>
-      </div>
+      <HomeContent isVisible={isVisible} />
     </SnowflakeProvider>
   );
 }
