@@ -57,63 +57,6 @@ function NavLinks() {
   );
 }
 
-function DecryptedText({ text }) {
-  const [display, setDisplay] = useState('');
-  const [isHovering, setIsHovering] = useState(false);
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const intervalRef = useRef();
-
-  // Animation function
-  const animate = () => {
-    let frame = 0;
-    clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
-      setDisplay((prev) => {
-        return text
-          .split('')
-          .map((char, i) => {
-            if (i < frame) return char;
-            return chars[Math.floor(Math.random() * chars.length)];
-          })
-          .join('');
-      });
-      frame++;
-      if (frame > text.length) {
-        clearInterval(intervalRef.current);
-        setDisplay(text);
-      }
-    }, 70);
-  };
-
-  // On mount animate
-  React.useEffect(() => {
-    animate();
-    return () => clearInterval(intervalRef.current);
-    // eslint-disable-next-line
-  }, [text]);
-
-  // On hover animate
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-    animate();
-  };
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-    setDisplay(text);
-  };
-
-  return (
-    <span
-      className="text-white text-2xl font-bold tracking-tight cursor-pointer select-none"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      aria-label={text}
-    >
-      {display}
-    </span>
-  );
-}
-
 export default function Navbar({ isVisible }) {
   const { isActive, toggleSnowflakes } = useSnowflakes();
 
@@ -125,7 +68,9 @@ export default function Navbar({ isVisible }) {
           <div className="flex justify-around items-center pb-1">
             {/* Logo and Name */}
             <div className="flex items-center gap-2" style={{ width: '145px', minWidth: '145px' }}>
-              <DecryptedText text="SUDHARSAN." />
+              <span className="text-white text-2xl font-bold tracking-tight select-none" aria-label="SUDHARSAN.">
+                SUDHARSAN.
+              </span>
             </div>
 
             {/* Center Navigation Links */}
