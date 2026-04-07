@@ -31,11 +31,6 @@ export default function ProfessionalBio() {
             />
 
             <div className="relative z-10 flex flex-col gap-12 ">
-                {/* Snowflake Decorations */}
-                <div className="absolute -top-8 -left-4 text-2xl text-gray-700 opacity-40">❄</div>
-                <div className="absolute top-32 -right-6 text-2xl text-gray-700 opacity-40">❄</div>
-                <div className="absolute top-4 right-8 text-2xl text-gray-700 opacity-40">❄</div>
-
                 {/* Main Titles Section */}
                 <div className="flex flex-col p-3 ">
                     {/* Senior UX designer */}
