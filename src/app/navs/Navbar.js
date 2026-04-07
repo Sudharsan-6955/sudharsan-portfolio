@@ -57,63 +57,6 @@ function NavLinks() {
   );
 }
 
-function DecryptedText({ text }) {
-  const [display, setDisplay] = useState('');
-  const [isHovering, setIsHovering] = useState(false);
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const intervalRef = useRef();
-
-  // Animation function
-  const animate = () => {
-    let frame = 0;
-    clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
-      setDisplay((prev) => {
-        return text
-          .split('')
-          .map((char, i) => {
-            if (i < frame) return char;
-            return chars[Math.floor(Math.random() * chars.length)];
-          })
-          .join('');
-      });
-      frame++;
-      if (frame > text.length) {
-        clearInterval(intervalRef.current);
-        setDisplay(text);
-      }
-    }, 70);
-  };
-
-  // On mount animate
-  React.useEffect(() => {
-    animate();
-    return () => clearInterval(intervalRef.current);
-    // eslint-disable-next-line
-  }, [text]);
-
-  // On hover animate
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-    animate();
-  };
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-    setDisplay(text);
-  };
-
-  return (
-    <span
-      className="text-white text-2xl font-bold tracking-tight cursor-pointer select-none"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      aria-label={text}
-    >
-      {display}
-    </span>
-  );
-}
-
 export default function Navbar({ isVisible }) {
   const { isActive, toggleSnowflakes } = useSnowflakes();
 
@@ -125,7 +68,9 @@ export default function Navbar({ isVisible }) {
           <div className="flex justify-around items-center pb-1">
             {/* Logo and Name */}
             <div className="flex items-center gap-2" style={{ width: '145px', minWidth: '145px' }}>
-              <DecryptedText text="SUDHARSAN." />
+              <span className="text-white text-2xl font-bold tracking-tight select-none" aria-label="SUDHARSAN.">
+                SUDHARSAN.
+              </span>
             </div>
 
             {/* Center Navigation Links */}
@@ -155,7 +100,7 @@ export default function Navbar({ isVisible }) {
                 className="inline-flex h-8 w-8 items-center justify-center rounded-full text-gray-400 transition-colors duration-200 hover:text-blue-400"
                 aria-label="Email"
               >
-                <svg className="w-[23px] h-[23px]" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5.75 h-5.75" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
               </a>
