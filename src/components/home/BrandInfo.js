@@ -33,7 +33,7 @@ export default function BrandInfo() {
           <div className="flex items-center gap-3">
             <Image src="/Assets/Brandinfo/node.svg" alt="nodejs logo" className="w-7 h-7" width={24} height={24} style={{ filter: 'invert(0.8) sepia(0.8) hue-rotate(100deg) saturate(1.5)' }} />
             <h3 className="text-white font-bold font-syne text-xl" >
-              Node<span className="text-[#FF9900]">Snap</span>
+              Node <span className="text-[#FF9900]">Snap</span>
             </h3>
           </div>
 
