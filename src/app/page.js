@@ -1,65 +1,37 @@
-'use client';
+import HomePageClient from '@/components/home/HomePageClient';
 
-import { useState, useEffect } from 'react';
-import HeroSection from '@/components/home/HeroSection';
-import ProjectsSection from '@/components/projects/ProjectsSection';
-import ContactPage from '@/components/contact/ContactPage';
-import AboutGrid from '@/components/about/AboutGrid';
-import Navbar from './navs/Navbar';
-import Bottomnav from './navs/Bottomnav';
-import SnowCanvas from '@/components/Backgrounds/SnowCanvas';
-import { SnowflakeProvider, useSnowflakes } from '@/contexts/SnowflakeContext';
-
-function HomeContent({ isVisible }) {
-  const { isActive } = useSnowflakes();
-
-  return (
-    <div className="min-h-screen bg-[#161B1C] z-10">
-      {isActive ? <SnowCanvas /> : null}
-      <Navbar isVisible={isVisible} />
-      <Bottomnav isVisible={isVisible} />
-      {/* Main Content */}
-      <main className="pt-28 max-w-7xl mx-auto   md:px-6 py-20 pb-10">
-        <HeroSection />
-        <section id="about" className="text-white py-5 px-1 md:px-10 min-h-auto flex flex-col items-center justify-center">
-          <div className="mt-10 w-full flex justify-center">
-            <AboutGrid />
-          </div>
-        </section>
-        <ProjectsSection />
-        <ContactPage />
-      </main>
-    </div>
-  );
-}
+export const metadata = {
+  title: {
+    absolute: 'Sudharsan V | Full Stack MERN Developer',
+  },
+  description:
+    'Sudharsan V portfolio home page featuring full stack MERN development, hands-on project experience, and modern web app work.',
+  keywords: [
+    'Sudharsan V portfolio',
+    'Full Stack MERN Developer',
+    'MERN portfolio',
+    'Web developer projects',
+    'React Node MongoDB',
+    'JavaScript developer',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Sudharsan V | Full Stack MERN Developer',
+    description:
+      'Explore the portfolio of Sudharsan V with featured MERN stack projects, about section, and contact details.',
+    url: '/',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sudharsan V | Full Stack MERN Developer',
+    description:
+      'Portfolio website showcasing projects and full stack MERN development experience.',
+  },
+};
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      // Show navbar when scrolling up
-      if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
-      }
-      // Hide navbar when scrolling down
-      else if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsVisible(false);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
-
-  return (
-    <SnowflakeProvider>
-      <HomeContent isVisible={isVisible} />
-    </SnowflakeProvider>
-  );
+  return <HomePageClient />;
 }
