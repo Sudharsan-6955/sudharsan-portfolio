@@ -14,7 +14,7 @@ export default function NaturePhotoCard() {
         </a>
       </div>
       <img
-        src="/Assets/Projects/Product.svg"
+        src="/Assets/Projects/Product.webp"
         alt="Password Generator background"
         className="absolute inset-0 w-full h-full object-cover   pointer-events-none select-none z-0"
         aria-hidden="true"

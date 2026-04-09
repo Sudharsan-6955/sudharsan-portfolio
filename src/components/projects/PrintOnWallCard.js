@@ -4,7 +4,7 @@ export default function PrintOnWallCard() {
     <div className="relative bg-[#151417] rounded-2xl overflow-hidden border border-gray-700 transition-all duration-300 group">
       {/* SVG Background */}
       <img
-        src="/Assets/Projects/rajsurgical.svg"
+        src="/Assets/Projects/rajsurgical.webp"
         alt="Raj Surgical background"
         className="absolute inset-0 w-full h-full object-cover   pointer-events-none select-none z-0"
         aria-hidden="true"

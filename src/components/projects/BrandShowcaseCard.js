@@ -6,8 +6,8 @@ export default function BrandShowcaseCard() {
         {/* DesignInfinity */}
         <div className="relative bg-ber-500 rounded-xl flex flex-col justify-between overflow-hidden min-h-[120px]">
           <img
-            src="/Assets/Projects/Musicapp.svg"
-            alt="Password Generator background"
+            src="/Assets/Projects/Musicapp.webp"
+            alt="PMusicapp"
             className=" inset-0 w-full h-full object-cover  pointer-events-none select-none z-0"
             aria-hidden="true"
           />
@@ -24,7 +24,7 @@ export default function BrandShowcaseCard() {
         {/* Restaurant */}
         <div className="relative bg-ber-500 rounded-xl flex flex-col justify-between overflow-hidden min-h-[120px]">
           <img
-            src="/Assets/Projects/Calc.svg"
+            src="/Assets/Projects/Calc.webp"
             alt="Password Generator background"
             className=" inset-0 w-full h-full object-cover  pointer-events-none select-none z-0"
             aria-hidden="true"
@@ -43,7 +43,7 @@ export default function BrandShowcaseCard() {
         {/* Hotel Badge */}
         <div className="relative bg-ber-500 rounded-xl flex flex-col justify-between overflow-hidden min-h-[120px]">
           <img
-            src="/Assets/Projects/PasswordGen.svg"
+            src="/Assets/Projects/PasswordGen.webp"
             alt="Password Generator background"
             className=" inset-0 w-full h-full object-cover pointer-events-none select-none z-0"
             aria-hidden="true"
