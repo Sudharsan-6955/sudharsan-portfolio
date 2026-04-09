@@ -21,7 +21,7 @@ export const metadata = {
     type: 'website',
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary_large_image  ',
     title: 'Contact | Sudharsan V',
     description:
       'Contact page for collaboration, freelance work, and full stack development opportunities.',

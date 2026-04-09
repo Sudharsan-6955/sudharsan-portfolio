@@ -1,14 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/home/HeroSection';
-import ProjectsSection from '@/components/projects/ProjectsSection';
-import ContactPage from '@/components/contact/ContactPage';
-import AboutGrid from '@/components/about/AboutGrid';
 import Navbar from '@/app/navs/Navbar';
 import Bottomnav from '@/app/navs/Bottomnav';
-import SnowCanvas from '@/components/Backgrounds/SnowCanvas';
 import { SnowflakeProvider, useSnowflakes } from '@/contexts/SnowflakeContext';
+
+const AboutGrid = dynamic(() => import('@/components/about/AboutGrid'));
+const ProjectsSection = dynamic(() => import('@/components/projects/ProjectsSection'));
+const ContactPage = dynamic(() => import('@/components/contact/ContactPage'));
+const SnowCanvas = dynamic(() => import('@/components/Backgrounds/SnowCanvas'), {
+  ssr: false,
+});
 
 function HomeContent({ isVisible }) {
   const { isActive } = useSnowflakes();
@@ -35,27 +39,39 @@ function HomeContent({ isVisible }) {
 
 export default function HomePageClient() {
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = useRef(0);
+  const isVisibleRef = useRef(true);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      if (ticking) return;
+      ticking = true;
 
-      // Show navbar when scrolling up
-      if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
-      }
-      // Hide navbar when scrolling down
-      else if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsVisible(false);
-      }
+      requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        let nextIsVisible = isVisibleRef.current;
 
-      setLastScrollY(currentScrollY);
+        if (currentScrollY < lastScrollYRef.current) {
+          nextIsVisible = true;
+        } else if (currentScrollY > lastScrollYRef.current && currentScrollY > 50) {
+          nextIsVisible = false;
+        }
+
+        if (nextIsVisible !== isVisibleRef.current) {
+          isVisibleRef.current = nextIsVisible;
+          setIsVisible(nextIsVisible);
+        }
+
+        lastScrollYRef.current = currentScrollY;
+        ticking = false;
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <SnowflakeProvider>

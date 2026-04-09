@@ -1,4 +1,6 @@
-import HomePageClient from '@/components/home/HomePageClient';
+import dynamic from 'next/dynamic';
+
+const HomePageClient = dynamic(() => import('@/components/home/HomePageClient'));
 
 export const metadata = {
   title: {
