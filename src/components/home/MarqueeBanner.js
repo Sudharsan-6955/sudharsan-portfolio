@@ -1,5 +1,3 @@
-'use client';
-
 export default function MarqueeBanner() {
   const marqueeText = "∞ CODE BUILDER ∞ MERN DEV ∞ UI/UX CREATOR ∞ DREAMER EXPLORER ∞ TECH ∞ SUDHARSAN ∞";
 

@@ -95,7 +95,12 @@ export default function ContactPage() {
             </div>
 
             {/* Bottom Right */}
-            <div className="border border-gray-700 rounded-2xl p-3 w-fit h-fit cursor-pointer hover:bg-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <button
+              type="button"
+              className="border border-gray-700 rounded-2xl p-3 w-fit h-fit cursor-pointer hover:bg-gray-900 transition-colors"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              aria-label="Scroll to top"
+            >
               <p className="text-xs md:text-base text-right flex flex-col font-syne text-[#ffffff]">
                 <span >You definitely missed </span>
                 <span className="flex items-center justify-end gap-2">
@@ -109,7 +114,7 @@ export default function ContactPage() {
                   </svg>
                 </span>
               </p>
-            </div>
+            </button>
           </div>
           {/* Bottom Left */}
           <div className=" text-center mt-5 rounded-2xl h-fit">
