@@ -15,7 +15,7 @@ export default function MobileDesignCard() {
       </div>
       {/* SVG Background */}
       <img
-        src="/Assets/Projects/LMS.svg"
+        src="/Assets/Projects/LMS.webp"
         alt="LMS background"
         className="absolute inset-0 w-full h-full object-cover  pointer-events-none select-none z-0"
         aria-hidden="true"

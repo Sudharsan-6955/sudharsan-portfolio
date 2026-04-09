@@ -41,7 +41,7 @@ const ExperienceCard = () => {
                     {/* Profile Photo & Name/Title in Row */}
                     <div className="flex gap-4 mb-4 w-full justify-center items-center">
                         <div className="w-20 h-20  rounded-md overflow-hidden  shadow-2xl shadow-orange-500">
-                            <img src="/Assets/About/photo.png" alt="Profile" className="w-full h-full object-cover" />
+                            <img src="/Assets/About/photo.webp" alt="Profile" className="w-full h-full object-cover" />
                         </div>
                         <div className="text-left my-auto">
                             <h3 className="text-lg font-bold text-white">Sudharsan V</h3>
