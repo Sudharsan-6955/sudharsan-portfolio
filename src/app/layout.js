@@ -37,7 +37,7 @@ const satoshi = localFont({
   display: "swap",
 });
 
-const siteUrl = "https://www.sudharsan.codes";
+const siteUrl = "https://www.sudharsanv.in";
 
 const personJsonLd = {
   "@context": "https://schema.org",

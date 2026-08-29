@@ -3,12 +3,16 @@ import dynamic from 'next/dynamic';
 const HomePageClient = dynamic(() => import('@/components/home/HomePageClient'));
 
 export const metadata = {
+  metadataBase: new URL('https://www.sudharsanv.in'),
   title: {
     absolute: 'Sudharsan V | Full Stack MERN Developer',
   },
   description:
     'Sudharsan V portfolio home page featuring full stack MERN development, hands-on project experience, and modern web app work.',
   keywords: [
+    'Sudharsan',
+    'Sudharsan V',
+    'Sudharsan Vetrivelmurugan',
     'Sudharsan V portfolio',
     'Full Stack MERN Developer',
     'MERN portfolio',
@@ -17,13 +21,14 @@ export const metadata = {
     'JavaScript developer',
   ],
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.sudharsanv.in/',
   },
   openGraph: {
     title: 'Sudharsan V | Full Stack MERN Developer',
     description:
       'Explore the portfolio of Sudharsan V with featured MERN stack projects, about section, and contact details.',
-    url: '/',
+    url: 'https://www.sudharsanv.in/',
+    siteName: 'Sudharsan V Portfolio',
     type: 'website',
   },
   twitter: {
