@@ -19,3 +19,115 @@
     background-position: 0% 0%;
   }
 }
+
+/* Rocket Launch Container */
+.rocket-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.rocket-icon {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center center;
+}
+
+/* Slight turn towards right corner (no translation, just rotation) */
+.group:hover .rocket-icon,
+.rocket-container:hover .rocket-icon {
+  transform: rotate(-18deg);
+  animation: rocketHoverTurn 0.6s ease-in-out infinite alternate 0.4s;
+}
+
+@keyframes rocketHoverTurn {
+  0% {
+    transform: rotate(-18deg);
+  }
+  100% {
+    transform: rotate(-21deg);
+  }
+}
+
+/* Turbo Air & Pure Smoke Exhaust (from the rocket's back tail nozzle) */
+.rocket-exhaust {
+  position: absolute;
+  bottom: 0px;
+  left: -2px;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.group:hover .rocket-exhaust,
+.rocket-container:hover .rocket-exhaust {
+  opacity: 1;
+}
+
+/* Clean White / Translucent Smoke Puffs */
+.smoke-puff {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.85) 0%, rgba(220, 225, 235, 0.45) 40%, rgba(200, 210, 220, 0) 70%);
+  filter: blur(0.6px);
+  opacity: 0;
+}
+
+.smoke-1 {
+  width: 6px;
+  height: 6px;
+  animation: smokeTrail1 0.5s ease-out infinite;
+}
+
+.smoke-2 {
+  width: 8px;
+  height: 8px;
+  animation: smokeTrail2 0.5s ease-out infinite 0.15s;
+}
+
+.smoke-3 {
+  width: 10px;
+  height: 10px;
+  animation: smokeTrail3 0.5s ease-out infinite 0.3s;
+}
+
+/* Drift straight out the rear nozzle along the rocket's back axis */
+@keyframes smokeTrail1 {
+  0% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-7px, 4px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes smokeTrail2 {
+  0% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-12px, 7px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes smokeTrail3 {
+  0% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-17px, 10px) scale(1.8);
+    opacity: 0;
+  }
+}
