@@ -62,7 +62,7 @@ export default function ProfessionalBio() {
                     {/* Photographer */}
                     <div className="flex justify-between pb-1 md:pb-0 items-start md:gap-6">
                         <h3 className="text-xl md:text-5xl font-bold text-[#F2F2F2] leading-tight flex-1 font-unbounded">
-                            Frontend Creater<span className="text-orange-500">.</span>
+                            Frontend Creator<span className="text-orange-500">.</span>
                         </h3>
                         <div className="hii text-right whitespace-nowrap md:pt-2 flex items-center  gap-2">
                             <div className="text-gray-400 text-xs mt-2 md:text-sm md:mt-6">Since</div>
@@ -93,9 +93,23 @@ export default function ProfessionalBio() {
 
                             <span className="text-red-500 font-bold"> Web Applications.</span>
                         </p>
-                        <button className="ml-6 font-syne gold-text bg-gray-800 hover:bg-gray-700 text-white px-1 md:px-2 py-3 rounded-full text-sm font-medium transition-colors flex items-center gap-2 whitespace-nowrap">
+                        <button className="group ml-6 font-syne gold-text bg-gray-800 hover:bg-gray-700 text-white px-3 md:px-4 py-3 rounded-full text-sm font-medium transition-colors flex items-center gap-2 whitespace-nowrap cursor-pointer relative overflow-visible">
                             Make it fly!
-                            <Image src="/Assets/Educat/rocket.svg" alt="rocket" className="md:h-5 h-3 w-auto" width={20} height={20} />
+                            <span className="rocket-container">
+                                <Image
+                                    src="/Assets/Educat/rocket.svg"
+                                    alt="rocket"
+                                    className="rocket-icon md:h-5 h-4 w-auto"
+                                    width={20}
+                                    height={20}
+                                />
+                                {/* Back side Turbo Pure Air Smoke */}
+                                <span className="rocket-exhaust" aria-hidden="true">
+                                    <span className="smoke-puff smoke-1" />
+                                    <span className="smoke-puff smoke-2" />
+                                    <span className="smoke-puff smoke-3" />
+                                </span>
+                            </span>
                         </button>
                     </div>
                 </div>
