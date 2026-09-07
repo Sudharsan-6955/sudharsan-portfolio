@@ -131,3 +131,39 @@
     opacity: 0;
   }
 }
+
+/* Rocket Launch Take-off on Click */
+.rocket-icon.launching {
+  animation: rocketBlastOff 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+}
+
+@keyframes rocketBlastOff {
+  0% {
+    transform: rotate(-18deg) translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(-24deg) translate(-2px, 2px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-24deg) translate(70px, -70px) scale(0.35);
+    opacity: 0;
+  }
+}
+
+.rocket-exhaust.launching {
+  opacity: 1 !important;
+  animation: exhaustBurst 0.5s ease-out forwards;
+}
+
+@keyframes exhaustBurst {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.6) translate(-14px, 12px);
+    opacity: 0;
+  }
+}

@@ -94,17 +94,13 @@ export default function EducationSection() {
       {/* GPA Section */}
       <div className="flex flex-col gap-4 border-t border-gray-700 pt-6 md:px-0 px-5">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <svg className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M5.5 13a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.3A4.5 4.5 0 1113.5 13H11V9.413l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13H5.5z" />
+          <div className="flex items-center gap-2.5">
+            <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.949 49.949 0 0 0-9.902 3.912l-.003.002-.34.18a.75.75 0 0 1-.707 0A50.009 50.009 0 0 0 1.4 10.057a.75.75 0 0 1-.231-1.338A60.653 60.653 0 0 1 11.7 2.805Z" />
+              <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 0 1-.46.71 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 0 1 11 15.419a2.25 2.25 0 0 0 2.06.054Z" />
             </svg>
             <span className="text-white font-medium font-satoshi">My GPA</span>
           </div>
-          <button className="text-gray-400 hover:text-gray-300">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
-          </button>
         </div>
 
         <div className="bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg p-6 ">

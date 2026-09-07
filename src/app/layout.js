@@ -1,4 +1,15 @@
-import { Geist, Geist_Mono, Space_Grotesk, Gochi_Hand } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Space_Grotesk,
+  Gochi_Hand,
+  Syne,
+  Unbounded,
+  Bricolage_Grotesque,
+  Share_Tech_Mono,
+  Plus_Jakarta_Sans,
+  DM_Sans,
+} from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import "@fontsource/dseg7-classic-mini";
@@ -6,23 +17,69 @@ import "@fontsource/dseg7-classic-mini";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 const gochiHand = Gochi_Hand({
   variable: "--font-gochi-hand",
   subsets: ["latin"],
   weight: "400",
+  display: "swap",
+});
+
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const shareTechMono = Share_Tech_Mono({
+  variable: "--font-share-tech-mono",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
 const satoshi = localFont({
@@ -36,6 +93,7 @@ const satoshi = localFont({
   variable: "--font-satoshi",
   display: "swap",
 });
+
 
 const siteUrl = "https://www.sudharsanv.in";
 
@@ -149,9 +207,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${gochiHand.variable} ${satoshi.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${gochiHand.variable} ${satoshi.variable} ${syne.variable} ${unbounded.variable} ${bricolage.variable} ${shareTechMono.variable} ${plusJakartaSans.variable} ${dmSans.variable} antialiased`}
         suppressHydrationWarning
       >
         <script
