@@ -26,6 +26,16 @@ function NavLinks() {
     setHoveredIdx(null);
   }
 
+  function handleScrollTo(e, targetId) {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      const yOffset = -70; // offset for fixed header
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }
+
   return (
     <div
       ref={containerRef}
@@ -46,7 +56,8 @@ function NavLinks() {
         <a
           key={item}
           href={`#${item.toLowerCase()}`}
-          className={`relative z-10 text-gray-200 font-medium px-3 py-1 transition-colors duration-200 ${hoveredIdx === idx ? 'text-white' : ''}`}
+          onClick={(e) => handleScrollTo(e, item.toLowerCase())}
+          className={`relative z-10 text-gray-200 font-medium px-3 py-1 transition-colors duration-200 cursor-pointer ${hoveredIdx === idx ? 'text-white' : ''}`}
           onMouseEnter={(e) => handleMouseEnter(idx, e)}
           onMouseLeave={handleMouseLeave}
         >
@@ -59,6 +70,16 @@ function NavLinks() {
 
 export default function Navbar({ isVisible }) {
   const { isActive, toggleSnowflakes } = useSnowflakes();
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const handleEmailClick = () => {
+    const email = 'sudharsan638294@gmail.com';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(email);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2500);
+    }
+  };
 
   return (
     <>
@@ -74,8 +95,8 @@ export default function Navbar({ isVisible }) {
             </div>
 
             {/* Center Navigation Links */}
-              {/* Animated Lubber/Slidebar Navigation */}
-              <NavLinks />
+            <NavLinks />
+
             {/* Social Icons */}
             <div className="flex items-center gap-1 rounded-full border border-gray-700/70 bg-gray-900/60 px-2 py-1">
               {/* Star Icon - Toggle Snow Dots */}
@@ -94,16 +115,25 @@ export default function Navbar({ isVisible }) {
                 </svg>
               </button>
 
-              {/* Email Icon */}
-              <a
-                href="mailto:sudharsan638294@gmail.com"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full text-gray-400 transition-colors duration-200 hover:text-blue-400"
-                aria-label="Email"
-              >
-                <svg className="w-5.75 h-5.75" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-              </a>
+              {/* Email Icon with Copy & Mailto */}
+              <div className="relative inline-flex items-center justify-center">
+                <a
+                  href="mailto:sudharsan638294@gmail.com"
+                  onClick={handleEmailClick}
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full text-gray-400 transition-colors duration-200 hover:text-blue-400 cursor-pointer"
+                  aria-label="Email Sudharsan"
+                  title="Click to copy & open email (sudharsan638294@gmail.com)"
+                >
+                  <svg className="w-5.75 h-5.75" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                </a>
+                {emailCopied && (
+                  <span className="absolute top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-blue-600 text-white text-[11px] rounded-md shadow-lg whitespace-nowrap z-50">
+                    Email copied!
+                  </span>
+                )}
+              </div>
 
               {/* LinkedIn Icon */}
               <a
