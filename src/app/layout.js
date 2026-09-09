@@ -181,20 +181,30 @@ export const metadata = {
     description:
       "Explore projects by Sudharsan V, a Full Stack MERN Developer with hands-on experience in building responsive, scalable, and user-focused web applications.",
     siteName: "Sudharsan V Portfolio",
+    images: [
+      {
+        url: `${siteUrl}/favicon/web-app-manifest-512x512.png`,
+        width: 512,
+        height: 512,
+        alt: "Sudharsan V - Full Stack MERN Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sudharsan V | Full Stack MERN Developer",
     description:
       "Portfolio of Sudharsan V featuring MERN stack projects, practical development experience, and full-stack capabilities.",
+    images: [`${siteUrl}/favicon/web-app-manifest-512x512.png`],
   },
   icons: {
     icon: [
-      { url: "/favicon/favicon.ico" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
       { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
     ],
-    shortcut: "/favicon/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: [
       { url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
