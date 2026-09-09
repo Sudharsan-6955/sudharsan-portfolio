@@ -30,12 +30,21 @@ export const metadata = {
     url: 'https://www.sudharsanv.in/',
     siteName: 'Sudharsan V Portfolio',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.sudharsanv.in/favicon/web-app-manifest-512x512.png',
+        width: 512,
+        height: 512,
+        alt: 'Sudharsan V - Full Stack MERN Developer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sudharsan V | Full Stack MERN Developer',
     description:
       'Portfolio website showcasing projects and full stack MERN development experience.',
+    images: ['https://www.sudharsanv.in/favicon/web-app-manifest-512x512.png'],
   },
 };
 
