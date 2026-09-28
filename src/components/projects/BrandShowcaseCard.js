@@ -24,13 +24,13 @@ export default function BrandShowcaseCard() {
         {/* Restaurant */}
         <div className="relative bg-ber-500 rounded-xl flex flex-col justify-between overflow-hidden min-h-[120px]">
           <img
-            src="/Assets/Projects/Calc.webp"
-            alt="Password Generator background"
+            src="/Assets/Projects/seatbooking.webp"
+            alt="Seat Booking Web"
             className=" inset-0 w-full h-full object-cover  pointer-events-none select-none z-0"
             aria-hidden="true"
           />
           <a
-            href="https://multical-c.vercel.app/"
+            href="https://seat-booking-app-six.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="absolute right-2 bottom-2 z-20 cursor-pointer"
