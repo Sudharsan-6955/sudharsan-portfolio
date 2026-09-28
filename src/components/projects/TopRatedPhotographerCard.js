@@ -8,7 +8,7 @@ export default function TopRatedPhotographerCard() {
         alt="Devtackle background"
         className="absolute inset-0 w-full h-full object-cover  rounded-2xl  pointer-events-none select-none z-0"
         aria-hidden="true"
-      />
+      /> 
  
       {/* GitHub Button - bottom right */}
        <a
