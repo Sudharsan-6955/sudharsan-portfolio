@@ -67,7 +67,7 @@ const ExperienceCard = () => {
                     </div>
 
                     {/* Stats Grid */}
-                    <div className="grid grid-cols-3 gap-2 w-full">
+                    <div className=" w-full flex justify-around">
                         <div className="rounded-lg p-2 flex flex-col items-center font-bricolage">
                             <span className="text-xl font-bold text-yellow-400 ">160</span>
                             <span className="text-xs text-gray-300">Repos</span>
@@ -76,10 +76,10 @@ const ExperienceCard = () => {
                             <span className="text-xl font-bold text-blue-400">40</span>
                             <span className="text-xs text-gray-300">LeetCode</span>
                         </div>
-                        <div className="rounded-lg p-2 flex flex-col items-center font-bricolage">
+                        {/* <div className="rounded-lg p-2 flex flex-col items-center font-bricolage">
                             <span className="text-xl font-bold text-green-400">25</span>
                             <span className="text-xs text-gray-300">GFG</span>
-                        </div>
+                        </div> */}
                     </div>
                     {/* Blooming Description - visible when in view */}
                     <BloomingDescription />

@@ -24,14 +24,21 @@ const AboutGrid = () => {
                         About me<span className="text-orange-500">.</span>
                     </h1>
                 </div>
-                <button className="bg-black text-white px-7 py-3 rounded-2xl text-xs md:text-lg font-semibold shadow-lg hover:bg-gray-900 transition w-fit">Let’s Work Together</button>
+                <a
+                    href="https://www.linkedin.com/in/sudharsan-dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-7 py-3 rounded-2xl text-xs md:text-lg font-semibold shadow-lg hover:bg-gray-900 transition w-fit inline-flex items-center justify-center cursor-pointer"
+                >
+                    Let’s Work Together
+                </a>
 
             </div>
             <div className="flex flex-col md:flex-row md:items-center items-center md:justify-between gap-4 md:mb-8">
                 <div className="flex items-center gap-3 md:mt-0">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-semibold border border-green-300">
+                    {/* <span className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-semibold border border-green-300">
                         <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Open to work
-                    </span>
+                    </span> */}
                 </div>
                 <p className="text-lg md:text-xl font-medium text-gray-300 text-center md:text-left flex-1">Feel free to explore my portfolio and reach out — I'd love to connect!</p>
             </div>

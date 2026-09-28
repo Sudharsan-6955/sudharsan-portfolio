@@ -10,12 +10,11 @@ export default function MarqueeBanner() {
     { label: "SUDHARSAN", special: true },
   ];
 
-  // Repeat the list to ensure track width is sufficiently wide
   const sequence = [...items, ...items];
 
   const renderTrack = (ariaHidden = false) => (
     <div
-      className="flex shrink-0 items-center gap-4 animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap pl-4"
+      className="flex shrink-0 items-center gap-4 md:mt-2 animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap pl-4"
       aria-hidden={ariaHidden ? 'true' : undefined}
     >
       {sequence.map((item, idx) => (
@@ -38,11 +37,7 @@ export default function MarqueeBanner() {
   );
 
   return (
-    <div className="group relative w-full bg-[#151417]/95 border border-white/10 rounded-2xl overflow-hidden py-2.5 shadow-lg backdrop-blur-md select-none">
-      {/* Left & Right subtle edge fade mask */}
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 z-10 bg-gradient-to-r from-[#151417] to-transparent" />
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 z-10 bg-gradient-to-l from-[#151417] to-transparent" />
-
+    <div className="group relative w-full bg-transparent overflow-hidden py-2 select-none [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
       {/* Dual track for seamless infinite looping */}
       <div className="flex w-max cursor-default">
         {renderTrack(false)}
@@ -51,4 +46,3 @@ export default function MarqueeBanner() {
     </div>
   );
 }
-

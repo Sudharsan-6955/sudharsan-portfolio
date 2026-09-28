@@ -20,8 +20,8 @@ export default function EducationSection() {
   }, [showGPA]);
 
   return (
-    <div className="flex flex-col gap-6 relative bg-[#151417] border border-gray-700 rounded-lg md:p-8 pb-3">
-      <div className='pt-5 flex justify-between md:px-0 px-5'>
+    <div className="flex flex-col md:mt-2 mt-0 gap-6 relative bg-[#151417] border border-gray-700 rounded-lg md:p-8 pb-3">
+      <div className='pt-2 pb-3 flex justify-between md:px-0 px-5'>
         <h5 className="text-[#F2F2F2] font-bold text-2xl md:text-3xl font-bricolage">
           My Education  <br />
           Journey.
