@@ -145,13 +145,13 @@ export default function QuoteCard() {
 
           <div className='flex justify-center gap-2 font-normal'>
             <div>
-              <p className="text-white text-6xl font-bold ">4
+              <p className="text-white text-6xl font-bold ">3
               </p>
             </div>
             <div className='mt-4'>
 
               <p className="text-gray-400 text-xs "><span className="text-sm font-normal"> years </span>My</p>
-              <p className="text-gray-400 text-sm">Expertise</p>
+              <p className="text-gray-400 text-sm">learning Expertise</p>
             </div>
             <div className='flex justify-items-center my-auto'>
               <img src="/Assets/Projects/user-journey.svg" alt="Visit Repo" className="w-14 h-14" />

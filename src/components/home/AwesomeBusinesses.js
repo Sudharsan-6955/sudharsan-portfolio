@@ -189,7 +189,7 @@ export default function AwesomeBusinesses() {
   };
 
   return (
-    <div className="flex flex-col gap-4 border bg-[#151417] border-gray-700 rounded-lg px-4 py-6 md:px-8 md:pt-10 relative">
+    <div className="flex flex-col gap-4 md:mt-2 border bg-[#151417] border-gray-700 rounded-lg px-4 py-6 md:px-8 md:pt-10 relative">
       {/* Marquee Header
       <div className="overflow-hidden bg-gray-900 border border-gray-700 rounded-lg py-2 px-4">
         <div className="animate-marquee inline-block whitespace-nowrap text-sm text-gray-400 font-[--font-space-grotesk]">
@@ -199,7 +199,7 @@ export default function AwesomeBusinesses() {
 
       {/* Title */}
       <div>
-        <div className="flex items-center gap-2 mb-4 text-gray-400 text-sm font-satoshi font-medium">
+        <div className="flex items-center gap-2 mb-4  text-gray-400 text-sm font-satoshi font-medium">
           <span>Core Knowledge</span>
           <span className="text-gray-600">∞</span>
           <span>Applied Development</span>
