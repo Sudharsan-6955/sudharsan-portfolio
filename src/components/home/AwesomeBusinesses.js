@@ -237,10 +237,15 @@ export default function AwesomeBusinesses() {
                   </div>
                   <span className="text-white font-medium font-[--font-space-grotesk]">{skill.name}</span>
                 </div>
-                <button className="text-gray-400 hover:text-gray-300 transition" onClick={() => setSelectedSkill(null)}>
+                <button
+                  type="button"
+                  aria-label="Reset skill selection"
+                  className="text-gray-400 hover:text-gray-300 transition p-1 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
+                  onClick={() => setSelectedSkill(null)}
+                >
                   <Image
                     src="/Assets/Brandinfo/reload.svg"
-                    alt="Close"
+                    alt="Reset"
                     width={20}
                     height={20}
                     className=" transition-transform duration-500 brightness-0 invert"
@@ -277,7 +282,7 @@ export default function AwesomeBusinesses() {
                 </div>
 
               </div>
-              <p className="text-gray-400 text-xs font-bricolage">👉 Click any skill below to learn more details</p>
+              <p className="text-gray-400 text-xs font-bricolage">Click any skill below to learn more details</p>
             </div>
           )}
         </div>
@@ -293,8 +298,18 @@ export default function AwesomeBusinesses() {
             return (
               <div
                 key={key}
+                role="button"
+                tabIndex={0}
+                aria-label={`View details for ${skillData.name}`}
+                aria-pressed={selectedSkill === key}
                 onClick={() => handleLogoClick(key)}
-                className="flex items-center justify-center cursor-pointer group"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleLogoClick(key);
+                  }
+                }}
+                className="flex items-center justify-center cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 rounded-lg"
               >
                 <div
                   className={`Btn w-16 h-16 bg-gray-80 rounded-lg flex items-center justify-center transition ${selectedSkill === key ? 'md:ring-1 ring-gray-500 ring-offset- ring-offset-gray-900' : ''} ${animClass} relative`}
