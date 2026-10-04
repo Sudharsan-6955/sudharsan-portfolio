@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import ExperienceCard from "./ExperienceCard";
-import Repocard from "./Repocard";
-import ReadingCard from "./ReadingCard";
-import MapCard from "./MapCard";
+// import Repocard from "./Repocard";
+// import ReadingCard from "./ReadingCard";
+// import MapCard from "./MapCard";
 import HowIWorkCard from "./HowIWorkCard";
 
 // import Phoneui from "../ui/phoneui";
@@ -28,7 +28,8 @@ const AboutGrid = () => {
                     href="https://www.linkedin.com/in/sudharsan-dev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-black text-white px-7 py-3 rounded-2xl text-xs md:text-lg font-semibold shadow-lg hover:bg-gray-900 transition w-fit inline-flex items-center justify-center cursor-pointer"
+                    aria-label="Let's work together - Connect on LinkedIn (opens in a new tab)"
+                    className="bg-black text-white px-7 py-3 rounded-2xl text-xs md:text-lg font-semibold shadow-lg hover:bg-gray-900 transition w-fit inline-flex items-center justify-center cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#161B1C]"
                 >
                     Let’s Work Together
                 </a>
@@ -44,12 +45,12 @@ const AboutGrid = () => {
             </div>
 
             {/* Grid Section */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-4 gap-4 w-full h-auto min-h-150">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full h-auto">
                 <ExperienceCard />
                  <HowIWorkCard />
-                <Repocard />
+                {/* <Repocard />
                 <ReadingCard />
-                <MapCard />
+                <MapCard /> */}
                
             </div>
         </div>
