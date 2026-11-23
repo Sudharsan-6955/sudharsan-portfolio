@@ -69,7 +69,7 @@ const ExperienceCard = () => {
                     {/* Stats Grid */}
                     <div className=" w-full flex justify-around">
                         <div className="rounded-lg p-2 flex flex-col items-center font-bricolage">
-                            <span className="text-xl font-bold text-yellow-400 ">160</span>
+                            <span className="text-xl font-bold text-yellow-400 ">120</span>
                             <span className="text-xs text-gray-300">Repos</span>
                         </div>
                         <div className="rounded-lg p-2 flex flex-col items-center font-bricolage">
