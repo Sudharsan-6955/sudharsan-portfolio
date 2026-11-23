@@ -124,7 +124,8 @@ export default function ProjectsSection() {
       feedback: "Thanks!! Optimized website that easily handles 200+ concurrent users without any lag. Highly recommended for any web development project!",
       avatar: "👨‍💼",
       badge: "Client ( job-portal )",
-      link: "https://bhairavajobs.com"
+      link: "https://bhairavajobs.com",
+      linkLabel: "Live Site"
     },
     {
       name: "anoopcodehack",
@@ -133,7 +134,18 @@ export default function ProjectsSection() {
       rating: 5,
       feedback: "Hey @Sudharsan-6955, your PR has been merged! You're officially a DevBoard contributor now. Feel free to pick up another issue anytime — always happy to have you here! 🙌",
       avatar: "🚀",
-      link: "https://github.com/anoopcodehack/DevBoard/pull/346#issuecomment-5359585446"
+      link: "https://github.com/anoopcodehack/DevBoard/pull/346#issuecomment-5359585446",
+      linkLabel: "GitHub PR"
+    },
+    {
+      name: "Hezuo",
+      role: "Open Source Developer",
+      badge: "DevKit Gen (VS Code)",
+      rating: 5,
+      feedback: "DevKit Gen is really useful! It generates clean React & Express project structures with one click without overwriting existing files, saving significant setup time. Impressive design detail!",
+      avatar: "🛠️",
+      link: "https://github.com/Sudharsan-6955/DevKit-Gen-vsext",
+      linkLabel: "VS Code Ext"
     },
     {
       name: "Sarah Johnson",
@@ -506,11 +518,11 @@ export default function ProjectsSection() {
                         href={testimonials[activeTestimonial].link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label={`View ${testimonials[activeTestimonial].name}'s merged PR comment on GitHub (opens in a new tab)`}
+                        aria-label={`View ${testimonials[activeTestimonial].name}'s reference link (opens in a new tab)`}
                         className="text-[10px] text-orange-400 hover:text-orange-300 font-syne px-2 inline-flex items-center gap-1 shrink-0 rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-orange-400"
-                        title="View GitHub PR Comment"
+                        title={testimonials[activeTestimonial].linkLabel || "View Link"}
                       >
-                        <span>GitHub PR</span>
+                        <span>{testimonials[activeTestimonial].linkLabel || "Link"}</span>
                         <svg aria-hidden="true" className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
